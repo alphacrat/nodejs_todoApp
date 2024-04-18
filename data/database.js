@@ -5,7 +5,7 @@ export const connectDb = () => {
         connect(process.env.database_uri, {
             dbName: "backendTodo"
         })
-        .then((c) => console.log("Connected to MongoDB"))
+        .then((c) => console.log(`Connected to MongoDB at ${c.connection.host}`))
         .catch((err) => console.log(err))
 }
 
